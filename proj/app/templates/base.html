@@ -1,0 +1,33 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/about/">Про бібліотеку</a>
+            <a href="/contacts/">Контакти</a>
+            <a href="/stats/">Статистика</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+
+</html>

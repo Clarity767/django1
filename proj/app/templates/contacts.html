@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Контакти
+{% endblock %}
+
+{% block content %}
+
+<section class="contacts">
+
+    <h1 class="contacts__title">Контакти</h1>
+
+    <div class="contacts__grid">
+
+        <div class="contacts__info">
+
+            <div class="contacts__item">
+                <p class="contacts__label">Адреса</p>
+                <p class="contacts__value">вул. Книжкова, 12, Дніпро, 49000</p>
+            </div>
+
+            <div class="contacts__item">
+                <p class="contacts__label">Телефон</p>
+                <p class="contacts__value">+38 (056) 123-45-67</p>
+            </div>
+
+            <div class="contacts__item">
+                <p class="contacts__label">Email</p>
+                <p class="contacts__value">library@dnipro.ua</p>
+            </div>
+
+            <div class="contacts__item">
+                <p class="contacts__label">Години роботи</p>
+                <p class="contacts__value">Пн–Пт: 09:00 – 19:00</p>
+                <p class="contacts__value">Сб: 10:00 – 16:00</p>
+                <p class="contacts__value">Нд: вихідний</p>
+            </div>
+
+        </div>
+
+        <div class="contacts__map">
+            <img class="contacts__map-img" src="{% static 'app/images/map.png' %}" alt="Карта з розташуванням бібліотеки">
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
