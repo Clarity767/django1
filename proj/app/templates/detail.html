@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ job.title }}
+{% endblock %}
+
+{% block content %}
+
+{% if job %}
+<div class="card">
+    <h1>{{ job.title }}</h1>
+
+    <p>Компанія: {{ job.company }}</p>
+
+    <p>Зарплата: {{ job.salary }}</p>
+
+    <p>{{ job.description }}</p>
+</div>
+{% else %}
+<p>Вакансію не знайдено.</p>
+{% endif %}
+
+<a href="{% url 'index' %}" class="btn">
+    Назад
+</a>
+
+{% endblock %}

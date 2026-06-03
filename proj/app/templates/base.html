@@ -1,33 +1,20 @@
 {% load static %}
-
-
 <!DOCTYPE html>
-<html lang="ua">
-
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 </head>
-
 <body>
 
-    <header>
-        <nav>
-            <a href="/">Головна</a>
-            <a href="/about/">Про бібліотеку</a>
-            <a href="/contacts/">Контакти</a>
-            <a href="/stats/">Статистика</a>
-        </nav>
-    </header>
+<div class="container">
 
-    <hr>
+    {% block content %}
+    {% endblock %}
 
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+</div>
 
 </body>
-
 </html>

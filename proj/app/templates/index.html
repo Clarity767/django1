@@ -1,15 +1,22 @@
 {% extends 'base.html' %}
-
 {% block title %}
-Главная
+Вакансії
 {% endblock %}
 
 {% block content %}
-<section class="hero">
-    <h1 class="hero__title">Ласкаво просимо до міської бібліотеки</h1>
-    <p class="hero__text">Ласкаво просимо до нашої бібліотеки — місця знань,
-        натхнення та нових відкриттів. Тут ви знайдете
-        художню літературу, наукові книги, сучасні видання
-        та затишний простір для навчання і відпочинку.</p>
-</section>
+
+<h1>Пошук роботи</h1>
+
+{% for job in jobs %}
+<div class="card">
+    <h2>{{ job.title }}</h2>
+    <p>Компанія: {{ job.company }}</p>
+    <p>Зарплата: {{ job.salary }}</p>
+
+    <a href="{% url 'detail' job.id %}" class="btn">
+        Детальніше
+    </a>
+</div>
+{% endfor %}
+
 {% endblock %}
