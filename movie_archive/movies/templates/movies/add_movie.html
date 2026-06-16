@@ -1,0 +1,33 @@
+{% extends 'movies/base.html' %}
+{% load static %}
+
+{% block title %}Додати фільм{% endblock %}
+
+{% block content %}
+
+<div class="add-movie-container">
+
+    <h1 class="page-title">➕ Додати фільм</h1>
+
+    <div class="form-box">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="form-buttons">
+                <button type="submit" class="btn">
+                    Зберегти
+                </button>
+
+                <a href="{% url 'movies' %}" class="btn-back">
+                    ← Назад до каталогу
+                </a>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

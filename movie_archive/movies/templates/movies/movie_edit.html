@@ -1,0 +1,55 @@
+{% extends 'movies/base.html' %}
+{% load static %}
+
+{% block title %}Редагування фільму{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Редагування фільму: {{ movie.title }}</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="{{ form.title.id_for_label }}">Назва фільму</label>
+        {{ form.title }}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.director.id_for_label }}">Режисер</label>
+        {{ form.director }}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.description.id_for_label }}">Опис</label>
+        {{ form.description }}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.genre.id_for_label }}">Жанр</label>
+        {{ form.genre }}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.year.id_for_label }}">Рік випуску</label>
+        {{ form.year }}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.poster.id_for_label }}">Постер</label>
+
+        {% if movie.poster %}
+            <div>
+                <img src="{{ movie.poster.url }}"
+                     alt="{{ movie.title }}"
+                     width="150">
+            </div>
+        {% endif %}
+
+        {{ form.poster }}
+    </div>
+
+    <button type="submit">Зберегти зміни</button>
+    <a href="{% url 'movie_detail' movie.id %}">Скасувати</a>
+</form>
+
+{% endblock %}

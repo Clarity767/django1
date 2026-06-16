@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Кіноархів{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'movies/css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+
+        <div class="logo">
+            Кіноархів
+        </div>
+
+        <nav class="nav">
+            <a href="{% url 'home' %}">Головна</a>
+            <a href="{% url 'author' %}">Про автора</a>
+            <a href="{% url 'movies' %}">Каталог фільмів</a>
+            <a href="{% url 'add_movie' %}">Додати фільм</a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="container content">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="container">
+        © 2026 Кіноархів | Django
+    </div>
+</footer>
+
+</body>
+</html>

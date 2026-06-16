@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: #e0e0e0;
+}
+
+header {
+    background: #111;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+header a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header a:hover {
+    color: #ffcc00;
+}
+
+.page-title {
+    text-align: center;
+    margin: 35px 0;
+    font-size: 34px;
+    color: #e0e0e0;
+}
+
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 40px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ffcc00;
+    color: #111;
+    border-color: #ffcc00;
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.movie-card {
+    background: #1a1a1a;
+    border: 1px solid #2e2e2e;
+    width: 230px;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    transition: 0.3s;
+    border-color: #444;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.movie-info h3 {
+    margin: 8px 0;
+    color: #ffffff;
+}
+
+.movie-info p {
+    margin: 4px 0;
+    color: #bdbdbd;
+}
+
+.movie-actions {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.movie-actions a {
+    padding: 8px;
+    border-radius: 8px;
+    background: #111;
+    border: 1px solid #333;
+    color: #ccc;
+    text-decoration: none;
+    text-align: center;
+}
+
+.movie-actions a:hover {
+    background: #ffcc00;
+    color: #111;
+    border-color: #ffcc00;
+}
+
+.movie-form {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #1a1a1a;
+    border: 1px solid #2e2e2e;
+    border-radius: 14px;
+}
+
+.movie-form input,
+.movie-form textarea,
+.movie-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #e0e0e0;
+}
+
+a {
+    color: #ccc;
+}
+
+a:hover {
+    color: #ffcc00;
+}

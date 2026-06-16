@@ -1,0 +1,16 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+
+<h2>Видалити фільм?</h2>
+
+<p>Ты впевнений, що хочешь видаляти: <b>{{ object.title }}</b> ?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Так, видаляти</button>
+</form>
+
+<a href="{% url 'movies' %}">Відміна</a>
+
+{% endblock %}
